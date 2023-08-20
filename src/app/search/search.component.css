@@ -1,0 +1,46 @@
+/*strt hero style*/
+.hero {
+  background: url(../img/homeImage.jpg) no-repeat center center /cover;
+  height: 350px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+/*end hero style*/
+/*start search card style*/
+.card{
+  margin-top: 25px;
+  margin-left: 25%;
+}
+.card-img{
+  margin-top: 5px;
+  height: 100px;
+  width: 100px;
+}
+.card-body{
+  align-items: left;
+  justify-content: left;
+}
+/*end search card style*/
+
+/*start button style*/
+.btn{
+  background-color: #ee5057;
+  color: #f4f4f4;
+  border: none;
+  }
+/*end button style*/
+
+@media (width<= 740px){
+  .card{
+    flex-direction: column;
+    text-align: center;
+    margin: 0 40px;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 25px;
+  }
+  .hero{
+    margin: 0;
+  }
+}

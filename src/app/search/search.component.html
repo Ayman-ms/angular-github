@@ -1,0 +1,24 @@
+<div class="hero">
+  <!--search index by card and bootstrap-->
+  <div class="row">
+  <div class="card  px-0 col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <div class="card-header text-center mb-3">
+      <img src="../favicon.ico" class="card-img" alt="Logo-Image">
+    </div>
+    <h5 class="card-title ms-4">Search by username</h5>
+    <div class="card-body">
+      <input class="form-name" [(ngModel)]="username" type="text" required class="form-control mb-3"
+      placeholder="Username" aria-describedby="basic-addon1">
+      <button class="btn" [disabled]="username==''" (click)="submit()">
+        <img width="25" height="25" src="https://img.icons8.com/ios/50/FFFFFF/search--v1.png" alt="search--v1"/>
+        Search
+      </button>
+    </div>
+  </div>
+  <div class="mt-5 ms-5">
+    <p *ngIf="repositoriesLength">{{username}} have only {{repositoriesLength}} repositories</p>
+  </div>
+
+<!-- send repositories as parameters to card -->
+
+<app-cards [repositories]="repositories"></app-cards>
