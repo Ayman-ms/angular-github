@@ -18,10 +18,9 @@ export class SearchComponent {
   repositoriesLength:any
   submit() {
   this.getResList.getResList(this.username).subscribe((res)=>{
-  console.log(res)
   this.repositories=res
   this.repositoriesLength=this.repositories.length
-  alertify.success('Success this user have '+this.repositoriesLength +' repositories');
+  if(this.repositoriesLength){alertify.success('Success this user have '+this.repositoriesLength +' repositories');}
     },error =>{
       if (error.code ='404') {
         alertify.error('Pleas try with avalible username');
